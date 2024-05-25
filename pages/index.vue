@@ -15,6 +15,11 @@
             <tr
               v-for="item in items"
               :key="item.name + item.tab"
+              :class="[
+                {
+                  [$style.empty]: item.count === '0' || item.total === '0',
+                },
+              ]"
               :style="{ backgroundColor: highlightedItemsColors[item.name] }"
             >
               <td>{{ item.name }}</td>
@@ -74,14 +79,7 @@
 </template>
 
 <script lang="ts" setup>
-type Item = {
-  name: string;
-  tab: 'Markets' | 'PR&Team' | 'Legal' | 'Specials' | '';
-  count: string;
-  total: string;
-};
-
-type ItemWithPrice = Item & { price: string };
+type HamsterKombatUpgradeWithPrice = HamsterKombatUpgrade & { price: string };
 
 const COLORS = [
   '#69bee9',
@@ -96,8 +94,8 @@ const COLORS = [
   '#086c61',
 ];
 
-const items = ref<Item[]>([]);
-const sortingItems = ref<ItemWithPrice[]>([]);
+const items = ref<HamsterKombatUpgrade[]>([]);
+const sortingItems = ref<HamsterKombatUpgradeWithPrice[]>([]);
 const highlightedItems = computed<string[]>(() => {
   return sortingItems.value.slice(0, 10).map((item) => item.name);
 });
@@ -145,28 +143,55 @@ function updateFromIn(event: Event): void {
   sortingItems.value = [];
   jsonOut.value = '';
 
-  const parsed = JSON.parse(target.value);
+  const parsedItems: HamsterKombatUpgrade[] = parseItems(target.value);
 
-  try {
-    if (!Array.isArray(parsed)) {
-      throw Error('Not array');
+  for (let i = 0; i < HAMSTER_KOMBAT_UPGRADES.length; i++) {
+    const upgrade = HAMSTER_KOMBAT_UPGRADES[i];
+
+    const parsedUpgrade = parsedItems.find((item) => item.name === upgrade.name && item.tab === upgrade.tab);
+
+    if (parsedUpgrade) {
+      items.value.push(parsedUpgrade);
+    } else {
+      items.value.push({
+        name: upgrade.name,
+        tab: upgrade.tab,
+        count: '0',
+        total: '0',
+      });
     }
-
-    for (let i = 0; i < parsed.length; i++) {
-      const parsedItem = parsed[i];
-
-      const item = parseItem(parsedItem);
-
-      items.value.push(item);
-    }
-  } catch (error) {}
+  }
 
   jsonIn.value = '';
 
   sort();
 }
 
-function parseItem(item: unknown): Item {
+function parseItems(json: string): HamsterKombatUpgrade[] {
+  let parsedItems: HamsterKombatUpgrade[] = [];
+
+  try {
+    const parsedJson = JSON.parse(json);
+
+    if (!Array.isArray(parsedJson)) {
+      throw Error('Not array');
+    }
+
+    for (let i = 0; i < parsedJson.length; i++) {
+      const parsedItem = parsedJson[i];
+
+      const item = parseItem(parsedItem);
+
+      parsedItems.push(item);
+    }
+  } catch (error) {
+    parsedItems = [];
+  }
+
+  return parsedItems;
+}
+
+function parseItem(item: unknown): HamsterKombatUpgrade {
   const valid =
     typeof item === 'object' &&
     item !== null &&
@@ -212,6 +237,10 @@ function parseItem(item: unknown): Item {
   td {
     text-align: center;
   }
+}
+
+.empty {
+  background-color: lightgray;
 }
 </style>
 
