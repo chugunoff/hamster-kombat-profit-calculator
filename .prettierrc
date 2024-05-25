@@ -1,0 +1,7 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "crlf",
+  "printWidth": 120
+}
