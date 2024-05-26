@@ -1,5 +1,9 @@
 <template>
   <article>
+    <div :class="$style.actions">
+      <button @click="updateFromEmpty">Fill empty</button>
+    </div>
+
     <div :class="$style.wrapper">
       <div :class="$style.tableWrapper">
         <table :class="$style.table">
@@ -69,6 +73,11 @@
           <tfoot></tfoot>
         </table>
       </div>
+    </div>
+
+    <div :class="$style.wrapper">
+      <div style="flex: 1">Import from text</div>
+      <div style="flex: 1">Export to text</div>
     </div>
 
     <div :class="$style.wrapper">
@@ -143,24 +152,9 @@ function updateFromIn(event: Event): void {
   sortingItems.value = [];
   jsonOut.value = '';
 
-  const parsedItems: HamsterKombatUpgrade[] = parseItems(target.value);
+  const parsedUpgrades: HamsterKombatUpgrade[] = parseItems(target.value);
 
-  for (let i = 0; i < HAMSTER_KOMBAT_UPGRADES.length; i++) {
-    const upgrade = HAMSTER_KOMBAT_UPGRADES[i];
-
-    const parsedUpgrade = parsedItems.find((item) => item.name === upgrade.name && item.tab === upgrade.tab);
-
-    if (parsedUpgrade) {
-      items.value.push(parsedUpgrade);
-    } else {
-      items.value.push({
-        name: upgrade.name,
-        tab: upgrade.tab,
-        count: '0',
-        total: '0',
-      });
-    }
-  }
+  fill(parsedUpgrades);
 
   jsonIn.value = '';
 
@@ -217,9 +211,40 @@ function parseItem(item: unknown): HamsterKombatUpgrade {
     total: typeof item.total === 'string' ? item.total : '',
   };
 }
+
+function updateFromEmpty(): void {
+  items.value = [];
+  sortingItems.value = [];
+  jsonOut.value = '';
+
+  fill([]);
+}
+
+function fill(parsedUpgrades: HamsterKombatUpgrade[]): void {
+  for (let i = 0; i < HAMSTER_KOMBAT_UPGRADES.length; i++) {
+    const upgrade = HAMSTER_KOMBAT_UPGRADES[i];
+
+    const parsedUpgrade = parsedUpgrades.find((item) => item.name === upgrade.name && item.tab === upgrade.tab);
+
+    if (parsedUpgrade) {
+      items.value.push(parsedUpgrade);
+    } else {
+      items.value.push({
+        name: upgrade.name,
+        tab: upgrade.tab,
+        count: '0',
+        total: '0',
+      });
+    }
+  }
+}
 </script>
 
 <style lang="scss" module>
+.actions {
+  display: flex;
+  flex-direction: column;
+}
 .wrapper {
   display: flex;
   gap: 12px;
