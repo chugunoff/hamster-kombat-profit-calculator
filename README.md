@@ -1,4 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Hamster Kombat Profit Calculator
+
+## On Pages
+
+https://chugunoff.github.io/hamster-kombat-profit-calculator/
+
+## Powered by Nuxt 3
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
