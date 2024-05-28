@@ -191,6 +191,14 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'Blocking suspicious accounts',
     tab: 'PR&Team',
   },
+  {
+    name: 'Tokenomics expert',
+    tab: 'PR&Team',
+  },
+  {
+    name: 'Consensys Explorer pass',
+    tab: 'PR&Team',
+  },
 
   {
     name: 'KYC',
