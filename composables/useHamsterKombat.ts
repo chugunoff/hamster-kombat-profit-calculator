@@ -242,6 +242,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
   },
 
   {
+    name: 'Youtube Gold Button',
+    tab: 'Specials',
+  },
+  {
     name: 'Hamster Youtube Channel',
     tab: 'Specials',
   },
