@@ -250,6 +250,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
   },
 
   {
+    name: 'Web3 academy launch',
+    tab: 'Specials',
+  },
+  {
     name: 'Youtube Gold Button',
     tab: 'Specials',
   },
