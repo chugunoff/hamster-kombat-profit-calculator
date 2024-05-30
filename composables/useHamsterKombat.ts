@@ -250,6 +250,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
   },
 
   {
+    name: 'Consensus Piranha Pass',
+    tab: 'Specials',
+  },
+  {
     name: 'Web3 academy launch',
     tab: 'Specials',
   },
