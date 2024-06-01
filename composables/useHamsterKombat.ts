@@ -199,6 +199,14 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'Consensys Explorer pass',
     tab: 'PR&Team',
   },
+  {
+    name: 'VC Labs',
+    tab: 'PR&Team',
+  },
+  {
+    name: 'Compliance officer',
+    tab: 'PR&Team',
+  },
 
   {
     name: 'KYC',
@@ -249,6 +257,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     tab: 'Legal',
   },
 
+  {
+    name: 'TON + Hamster Kombat = Success',
+    tab: 'Specials',
+  },
   {
     name: 'Consensus Piranha Pass',
     tab: 'Specials',
