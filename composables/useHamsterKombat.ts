@@ -207,6 +207,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'Compliance officer',
     tab: 'PR&Team',
   },
+  {
+    name: 'Welcome to Amsterdam',
+    tab: 'PR&Team',
+  },
 
   {
     name: 'KYC',
@@ -256,7 +260,19 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'License Nigeria',
     tab: 'Legal',
   },
+  {
+    name: 'License Japan',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Ethiopia',
+    tab: 'Legal',
+  },
 
+  {
+    name: 'Hamster Kombat merch',
+    tab: 'Specials',
+  },
   {
     name: 'TON + Hamster Kombat = Success',
     tab: 'Specials',
