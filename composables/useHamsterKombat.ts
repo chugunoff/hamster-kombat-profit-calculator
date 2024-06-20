@@ -94,6 +94,10 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'Trading bots',
     tab: 'Markets',
   },
+  {
+    name: 'LayerZero Listing',
+    tab: 'Markets',
+  },
 
   {
     name: 'Support team',
