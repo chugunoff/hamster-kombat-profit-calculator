@@ -215,6 +215,22 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
     name: 'Welcome to Amsterdam',
     tab: 'PR&Team',
   },
+  {
+    name: 'Development Hub Mumbai',
+    tab: 'PR&Team',
+  },
+  {
+    name: 'Data Canter Tokyo',
+    tab: 'PR&Team',
+  },
+  {
+    name: 'Leaderboards',
+    tab: 'PR&Team',
+  },
+  {
+    name: 'Minigame',
+    tab: 'PR&Team',
+  },
 
   {
     name: 'KYC',
@@ -271,6 +287,75 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
   {
     name: 'License Ethiopia',
     tab: 'Legal',
+  },
+  {
+    name: 'License India',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Bangladesh',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Indonesia',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Vietnam',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Turkey',
+    tab: 'Legal',
+  },
+  {
+    name: 'License Philippines',
+    tab: 'Legal',
+  },
+
+  {
+    name: 'DEX',
+    tab: 'Web3',
+  },
+  {
+    name: 'Oracle',
+    tab: 'Web3',
+  },
+  {
+    name: 'Vesting Smartcontracts',
+    tab: 'Web3',
+  },
+  {
+    name: 'Launchpad',
+    tab: 'Web3',
+  },
+  {
+    name: 'NFT Marketplace',
+    tab: 'Web3',
+  },
+  {
+    name: 'Grant for Developers',
+    tab: 'Web3',
+  },
+  {
+    name: 'NFT Metaverse',
+    tab: 'Web3',
+  },
+  {
+    name: 'Crypto Farming',
+    tab: 'Web3',
+  },
+  {
+    name: 'Sport Collectibles Marketplace',
+    tab: 'Web3',
+  },
+  {
+    name: 'Market Making',
+    tab: 'Web3',
+  },
+  {
+    name: 'Web3 Advertising Platform',
+    tab: 'Web3',
   },
 
   {
@@ -359,6 +444,78 @@ export const HAMSTER_KOMBAT_UPGRADES: Pick<HamsterKombatUpgrade, 'name' | 'tab'>
   },
   {
     name: '21 000 000 CEOs',
+    tab: 'Specials',
+  },
+  {
+    name: '+ 20 000 руб. по лучшей кредитной карте ВТБ',
+    tab: 'Specials',
+  },
+  {
+    name: 'Setting up business processes',
+    tab: 'Specials',
+  },
+  {
+    name: 'Speaking to employees',
+    tab: 'Specials',
+  },
+  {
+    name: 'Investments in farming',
+    tab: 'Specials',
+  },
+  {
+    name: 'Collection of vintage cars',
+    tab: 'Specials',
+  },
+  {
+    name: 'Launching a rocket to Mars',
+    tab: 'Specials',
+  },
+  {
+    name: 'Electric car production',
+    tab: 'Specials',
+  },
+  {
+    name: 'Speaking on a TV show',
+    tab: 'Specials',
+  },
+  {
+    name: 'Negotiations with partners',
+    tab: 'Specials',
+  },
+  {
+    name: 'Company development planning',
+    tab: 'Specials',
+  },
+  {
+    name: 'Communication with a mentor',
+    tab: 'Specials',
+  },
+  {
+    name: 'Hamster with friends',
+    tab: 'Specials',
+  },
+  {
+    name: 'Hamster helps whales',
+    tab: 'Specials',
+  },
+  {
+    name: 'Vipassana hamster',
+    tab: 'Specials',
+  },
+  {
+    name: 'University hamster',
+    tab: 'Specials',
+  },
+  {
+    name: 'Gym hamster',
+    tab: 'Specials',
+  },
+  {
+    name: 'Healthy nutrition hamster',
+    tab: 'Specials',
+  },
+  {
+    name: 'Sleeping hamster',
     tab: 'Specials',
   },
 ];
